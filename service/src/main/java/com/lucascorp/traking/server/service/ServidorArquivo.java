@@ -3,6 +3,8 @@ package com.lucascorp.traking.server.service;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import com.lucascorp.traking.server.client.ThreadCliente;
+
 public class ServidorArquivo {
 	
 	public static void main(String[] args) {

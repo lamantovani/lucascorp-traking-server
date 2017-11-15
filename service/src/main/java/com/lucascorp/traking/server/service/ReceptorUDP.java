@@ -4,19 +4,17 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 
-import javax.swing.JOptionPane;
+import com.lucascorp.traking.server.utils.FunctionsUtils;
 
 public class ReceptorUDP {
 
 	public static void main(String[] args) {
-		if (args.length != 1) {
-			System.out.println("Informe a porta a ser ouvida");
-			System.exit(0);
-		}
+
 
 		try {
+			
 			// Converte o argumento recebido para inteiro (numero da porta)
-			int port = Integer.parseInt(args[0]);
+			int port = Integer.parseInt(FunctionsUtils.getPropertiesByKey("traking.server.port"));
 			// Cria o DatagramSocket para aguardar mensagens, neste momento o método fica
 			// bloqueando
 			// até o recebimente de uma mensagem
@@ -32,6 +30,7 @@ public class ReceptorUDP {
 				ds.receive(pkg);
 				//JOptionPane.showMessageDialog(null, new String(pkg.getData()).trim(), "Mensagem recebida", 1);
 				//ds.close();
+				System.out.println("Mensagem recebida" + new String(pkg.getData()).trim());
 
 			}
 
