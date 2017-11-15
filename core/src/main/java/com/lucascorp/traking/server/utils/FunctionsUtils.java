@@ -8,7 +8,7 @@ public class FunctionsUtils {
 	
 	public static Properties getProp() throws IOException {
 		Properties props = new Properties();
-		FileInputStream file = new FileInputStream("./../core/properties/lucascorp-traking-server-LO.properties");
+		FileInputStream file = new FileInputStream("./../core/src/main/resources/properties/lucascorp-traking-server-LO.properties");
 		props.load(file);
 		return props;
 	}
