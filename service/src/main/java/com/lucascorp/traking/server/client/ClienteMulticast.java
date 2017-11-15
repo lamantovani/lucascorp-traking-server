@@ -1,4 +1,4 @@
-package com.lucascorp.traking.server.service;
+package com.lucascorp.traking.server.client;
 
 import java.net.DatagramPacket;
 import java.net.InetAddress;

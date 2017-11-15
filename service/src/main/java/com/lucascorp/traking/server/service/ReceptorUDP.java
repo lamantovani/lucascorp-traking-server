@@ -24,12 +24,17 @@ public class ReceptorUDP {
 			System.out.println("Ouvindo a porta: " + port);
 			// Preparando o buffer de recebimento da mensagem
 			byte[] msg = new byte[256];
-			// Prepara o pacote de dados
-			DatagramPacket pkg = new DatagramPacket(msg, msg.length);
-			// Recebimento da mensagem
-			ds.receive(pkg);
-			JOptionPane.showMessageDialog(null, new String(pkg.getData()).trim(), "Mensagem recebida", 1);
-			ds.close();
+			
+			while (true) {
+				// Prepara o pacote de dados
+				DatagramPacket pkg = new DatagramPacket(msg, msg.length);
+				// Recebimento da mensagem
+				ds.receive(pkg);
+				//JOptionPane.showMessageDialog(null, new String(pkg.getData()).trim(), "Mensagem recebida", 1);
+				//ds.close();
+
+			}
+
 		}
 
 		catch (IOException ioe) {
