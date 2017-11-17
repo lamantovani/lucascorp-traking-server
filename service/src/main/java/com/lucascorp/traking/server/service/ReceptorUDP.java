@@ -3,6 +3,8 @@ package com.lucascorp.traking.server.service;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import com.lucascorp.traking.server.utils.FunctionsUtils;
 
@@ -30,7 +32,9 @@ public class ReceptorUDP {
 				ds.receive(pkg);
 				//JOptionPane.showMessageDialog(null, new String(pkg.getData()).trim(), "Mensagem recebida", 1);
 				//ds.close();
-				System.out.println("Mensagem recebida" + new String(pkg.getData()).trim());
+				Date data = new Date();
+				SimpleDateFormat spf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+				System.out.println(spf.format(data) + " - Mensagem recebida: " + new String(pkg.getData()).trim());
 
 			}
 
