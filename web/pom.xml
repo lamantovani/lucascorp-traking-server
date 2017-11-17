@@ -156,7 +156,7 @@
 				<configuration>
 					<scanIntervalSeconds>3</scanIntervalSeconds>
 					<webApp>
-						<contextPath>/pizzaria</contextPath>
+						<contextPath>/traking-sever</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>

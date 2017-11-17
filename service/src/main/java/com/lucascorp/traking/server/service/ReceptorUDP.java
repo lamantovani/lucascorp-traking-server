@@ -37,6 +37,7 @@ public class ReceptorUDP {
 				System.out.println(spf.format(data) + " - Mensagem recebida: " + new String(pkg.getData()).trim());
 
 			}
+			
 
 		}
 
